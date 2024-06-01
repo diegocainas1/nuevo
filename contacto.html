@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <style>
+        body {
+            background-image: url('imagen1.jpg'); /* Ruta de la imagen de fondo */
+            background-size: cover; /* Cubre todo el área del cuerpo */
+            background-position: center; /* Centra la imagen de fondo */
+            font-family: Arial, sans-serif;
+            color: white; /* Cambia el color del texto si lo deseas */
+            margin: 0; /* Elimina el margen predeterminado del cuerpo */
+            padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+            height: 100vh; /* Establece la altura del cuerpo al 100% del viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact {
+            background-color: rgba(2, 28, 56, 0.8); /* Color de fondo del formulario con transparencia */
+            padding: 50px; /* Espaciado dentro del formulario */
+            border-radius: 50px; /* Bordes redondeados */
+            max-width: 400px; /* Ancho máximo del formulario */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        .contact h2 {
+            margin-bottom: 30px; /* Espaciado inferior del título */
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact form input, .contact form textarea {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 2px solid #ccc; /* Borde para los campos de entrada */
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo de los campos de entrada */
+        }
+
+        .contact form button {
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #021c38; /* Color de fondo del botón */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+        }
+
+        .contact form button:hover {
+            background-color: #8d6868; /* Color de fondo del botón al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+    <div id="contact" class="contact">
+        <h2>Contactanos</h2>
+        <form>
+            <input type="text" name="name" placeholder="Tu Nombre">
+            <input type="email" name="email" placeholder="Tu Email">
+            <textarea name="message" rows="4" placeholder="Tu Mensaje"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
