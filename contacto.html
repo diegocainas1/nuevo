@@ -21,14 +21,15 @@
 
         .contact {
             background-color: rgba(2, 28, 56, 0.8); /* Color de fondo del formulario con transparencia */
-            padding: 50px; /* Espaciado dentro del formulario */
-            border-radius: 50px; /* Bordes redondeados */
+            padding: 20px; /* Espaciado dentro del formulario */
+            border-radius: 10px; /* Bordes redondeados */
             max-width: 400px; /* Ancho máximo del formulario */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            position: relative; /* Posición relativa para que los elementos secundarios puedan ser posicionados de manera absoluta */
         }
 
         .contact h2 {
-            margin-bottom: 30px; /* Espaciado inferior del título */
+            margin-bottom: 20px; /* Espaciado inferior del título */
         }
 
         .contact form {
@@ -37,17 +38,17 @@
         }
 
         .contact form input, .contact form textarea {
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 2px solid #ccc; /* Borde para los campos de entrada */
-            border-radius: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc; /* Borde para los campos de entrada */
+            border-radius: 5px;
             background-color: rgba(255, 255, 255, 0.8); /* Fondo de los campos de entrada */
         }
 
         .contact form button {
             padding: 10px;
             border: none;
-            border-radius: 10px;
+            border-radius: 5px;
             background-color: #021c38; /* Color de fondo del botón */
             color: white;
             cursor: pointer;
@@ -57,9 +58,34 @@
         .contact form button:hover {
             background-color: #8d6868; /* Color de fondo del botón al pasar el ratón */
         }
+
+        .back-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(197, 76, 76, 0.5); /* Fondo del cuadro */
+            padding: 10px 20px; /* Espaciado interno del cuadro */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+
+        .back-button {
+            background-color: transparent;
+            border: none;
+            color: rgb(251, 250, 250);
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+    <div class="back-container">
+        <a href="index.html" class="back-button" onclick="history.back()">Volver</a>
+    </div>
     <div id="contact" class="contact">
         <h2>Contactanos</h2>
         <form>
