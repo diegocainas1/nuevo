@@ -37,6 +37,7 @@
             padding: 20px;
             position: relative;
             z-index: 1;
+            flex-grow: 1;
         }
 
         header {
@@ -108,7 +109,7 @@
         footer {
             text-align: center;
             padding: 1rem;
-            background-color: #021c38;                       
+            background-color: #021c38;
             color: white;
         }
 
@@ -149,6 +150,7 @@
             }
             header h1 {
                 font-size: 1.5rem;
+                padding: 0 60px; /* Espacio para el logo */
             }
             header .logo {
                 width: 60px;
@@ -163,6 +165,10 @@
             .about, .news, .gallery, .contact, .team {
                 padding: 10px;
             }
+            .team-member img {
+                width: 50px;
+                height: 50px;
+            }
         }
 
         @media screen and (max-width: 480px) {
@@ -171,9 +177,10 @@
             }
             header h1 {
                 font-size: 1.2rem;
+                padding: 0 50px; /* Espacio para el logo */
             }
             header .logo {
-                width: 50px;
+                width: 40px;
             }
             nav a {
                 margin: 3px 0;
