@@ -6,7 +6,7 @@
     <title>Memorias</title>
     <link rel="icon" href="logo.jpg" type="image/x-icon">
     <style>
-        /* Estilos CSS para el juego */
+        /* Estilos CSS para la página */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -22,6 +22,19 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
         }
 
         a {
@@ -29,12 +42,15 @@
             margin-top: 20px;
             text-decoration: none;
             color: #000000;
+            background-color: #ffffff;
             border: 1px solid #007bff;
             padding: 10px 20px;
             border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
+
         a:hover {
-            background-color: #000000;
+            background-color: #007bff;
             color: #ffffff;
         }
 
@@ -42,26 +58,83 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 20px;
+            gap: 20px;
         }
+
         .album-item {
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
             margin: 10px;
-            padding: 10px;
+            padding: 15px;
             text-align: center;
             width: 200px;
         }
+
         .album-item img {
             max-width: 100%;
             border-radius: 10px;
         }
+
         .album-item h3 {
             margin: 10px 0 5px 0;
             color: #ffffff;
         }
+
         .album-item a {
             color: #fa0000;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .album-item a:hover {
+            color: #ffffff;
+        }
+
+        /* Media queries para pantallas más pequeñas */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .album-item {
+                width: 160px; /* Reducir el tamaño del álbum en pantallas medianas */
+            }
+
+            .album {
+                gap: 10px;
+            }
+
+            a {
+                padding: 8px 16px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .album-item {
+                width: 140px; /* Reducir aún más el tamaño en pantallas pequeñas */
+            }
+
+            a {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -90,7 +163,5 @@
 
     <!-- Botón para volver al inicio -->
     <a href="index.html">Volver al inicio</a>
-
-    </script>
 </body>
 </html>
